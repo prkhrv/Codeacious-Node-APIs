@@ -5,6 +5,8 @@ const prodList = require('../controllers/product_controller');
 const listingList = require('../controllers/listing_controller');
 const userList = require('../controllers/user_controller');
 const inventoryList = require('../controllers/inventory_controller');
+const siteList = require('../controllers/site_controller');
+var VerifyToken = require('../../auth/VerifyToken')
 
 // var profile_pic = require('../../product/profile_pic');
 
@@ -47,6 +49,19 @@ router.post('/inventories',inventoryList.create_a_inventory);
 router.get('/inventories/:inventoryId',inventoryList.read_a_inventory)
 router.put('/inventories/:inventoryId',inventoryList.update_a_inventory)
 router.delete('/inventories/:inventoryId',inventoryList.delete_a_inventory);
+
+
+//Site routes
+
+router.get('/sites',siteList.list_all_sites)
+router.post('/sites',siteList.create_a_site);
+
+
+// app.route('/sites/:siteId')
+router.get('/sites/:siteId',siteList.read_a_site)
+router.put('/sites/:siteId',siteList.update_a_site)
+router.delete('/sites/:siteId',siteList.delete_a_site);
+
 
 
 

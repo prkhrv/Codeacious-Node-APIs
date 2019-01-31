@@ -7,6 +7,7 @@ var express = require('express'),
   Listing = require('./api/models/listing_model');
   User = require('./api/models/user_model');
   Inventory = require('./api/models/inventory_model');
+  Site = require('./api/models/site_model');
 
 // ******************************************************************
   bodyParser = require('body-parser');

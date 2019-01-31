@@ -6,9 +6,9 @@ var Schema = mongoose.Schema;
 
 
 var SellerSchema = new Schema({
-  name:{
-    type:String,
-    default:"username",
+  seller:{
+    type:Schema.Types.ObjectId,ref:'sel_User',
+    unique:true,
   },
 
 });
