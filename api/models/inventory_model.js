@@ -13,7 +13,7 @@ var InventorySchema = new Schema({
   seller:
   {
     type:Schema.Types.ObjectId,
-    ref:'sel_Seller',
+    ref:'sel_User',
     required:"Please give seller ID"
   },
 
